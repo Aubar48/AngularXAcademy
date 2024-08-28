@@ -1,0 +1,31 @@
+.container {
+    margin: 20px;
+    padding: 10px 5px;
+    display: flex; // hacer que el contenido se vea horizontal
+    background-color: #eee;
+    justify-content: center;
+    justify-items: center;
+    width: fit-content; // evitar que el gris ocupe todo el ancho
+    border-radius: 5px; // redondeamos bordes
+    }
+    .container button { // cualquier elemento button dentro de container
+    border-radius: 5px; // redondeamos bordes
+    border: none; // quitamos los bordes del button
+    background-color: #49d0ec;
+    padding: 10px;
+    margin: 0 5px;
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    cursor: pointer; // cambia el cursor al pasar el mouse por el botón
+    }
+    .container div { // cualquier elemento div dentro de container
+    min-width: 70px; // usamos min width para permitir que crezca
+    height: 50px;
+    display: flex; // cambiamos el display a flex para alinear
+    justify-content: center; // alinear al centro horizontalmente
+    align-items: center; // alinear al centro verticalmente
+    font-size: 20px;
+    }
+    * {font-family: sans-serif}
+    
