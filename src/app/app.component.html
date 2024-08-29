@@ -13,11 +13,9 @@
   <div class="container">
     <button [disabled]="disableBtn" (click)="sumar(1)" *ngIf="!bonus">+1</button>
     <button [disabled]="disableBtn" (click)="sumar(10)" *ngIf="bonus">+10</button>
-    <div [ngClass]="{
-      'warning': contador>75 && contador <=100,
-      'danger':contador>50 && contador <75,
-      'success':contador >=0  && contador<50
-    }">👍 {{contador}}</div>
+    <button [disabled]="disableBtnNegativo" (click)="restar(1)" >-1</button>
+
+    <div [ngClass]="textClases" [ngStyle]="textStyle">👍 {{contador}}</div>
     <button type="button" (click)="resetCounter()">Reset</button> <!-- Botón de reinicio -->
 
   </div>
@@ -36,4 +34,8 @@
       </tr>
     </tbody>
   </table>
+  <footer>
+    <p>xAcademy Nahuel Argandoña</p>
+    
+  </footer>
 </div>
