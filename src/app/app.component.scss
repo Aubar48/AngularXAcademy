@@ -1,31 +1,110 @@
+body {
+  background-color: #ffe0b2; /* Fondo naranja suave */
+  font-family: 'Comic Sans MS', sans-serif; /* Tipografía informal y alegre */
+  color: #006064; /* Color azul oscuro para el texto */
+  text-align: center;
+}
+
+.center {
+  display: flex;
+  flex-direction: column; /* Cambiar a columna */
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
 .container {
-    margin: 20px;
-    padding: 10px 5px;
-    display: flex; // hacer que el contenido se vea horizontal
-    background-color: #eee;
-    justify-content: center;
-    justify-items: center;
-    width: fit-content; // evitar que el gris ocupe todo el ancho
-    border-radius: 5px; // redondeamos bordes
-    }
-    .container button { // cualquier elemento button dentro de container
-    border-radius: 5px; // redondeamos bordes
-    border: none; // quitamos los bordes del button
-    background-color: #49d0ec;
-    padding: 10px;
-    margin: 0 5px;
-    width: 50px;
-    height: 50px;
-    font-size: 20px;
-    cursor: pointer; // cambia el cursor al pasar el mouse por el botón
-    }
-    .container div { // cualquier elemento div dentro de container
-    min-width: 70px; // usamos min width para permitir que crezca
-    height: 50px;
-    display: flex; // cambiamos el display a flex para alinear
-    justify-content: center; // alinear al centro horizontalmente
-    align-items: center; // alinear al centro verticalmente
-    font-size: 20px;
-    }
-    * {font-family: sans-serif}
-    
+  margin: 10px 0;
+  padding: 15px;
+  display: flex;
+  flex-direction: column; /* Alinear los elementos en columna */
+  background-color: #ffcc80; /* Color de fondo vibrante */
+  justify-content: center;
+  border-radius: 10px;
+  border: 3px solid #ff7043; /* Borde naranja intenso */
+  width: 300px;
+}
+
+.container button {
+  border-radius: 10px;
+  border: none;
+  background-color: #006064; /* Botones azul oscuro */
+  color: #fff;
+  padding: 10px;
+  margin: 10px 0; /* Espaciado entre botones */
+  width: 100%;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.container button:hover {
+  background-color: #00838f; /* Color más claro al pasar el mouse */
+}
+
+.container div {
+  min-width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28px;
+  border: 2px solid #006064;
+  background-color: #ffcc80; /* Fondo vibrante para el contador */
+}
+
+.container div.warning {
+  color: #d32f2f; /* Rojo para advertencia */
+  font-size: 28px;
+}
+
+.container div.danger {
+  color: #2e7d32; /* Verde para peligro */
+  font-size: 26px;
+}
+
+.container div.success {
+  color: #000; /* Negro para éxito */
+  font-size: 24px;
+}
+
+table {
+  width: 90%;
+  border-collapse: collapse;
+  margin: 20px auto;
+}
+
+table, th, td {
+  border: 2px solid #006064; /* Bordes de tabla azul oscuro */
+}
+
+th, td {
+  padding: 15px;
+  text-align: center;
+  font-family: 'Comic Sans MS', sans-serif;
+  background-color: #b2dfdb; /* Fondo celeste */
+  color: #006064; /* Texto azul oscuro */
+}
+
+thead {
+  background-color: #00838f; /* Fondo de encabezado más oscuro */
+  color: #fff;
+}
+
+img {
+  max-width: 90%;
+  border: 4px solid #006064; /* Borde de la imagen azul oscuro */
+  margin-bottom: 20px;
+}
+
+button[type="button"] {
+  background-color: #00838f; /* Color del botón de reset */
+  padding: 10px 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+button[type="button"]:hover {
+  background-color: #00acc1; /* Color más claro al pasar el mouse */
+}

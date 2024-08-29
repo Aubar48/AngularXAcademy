@@ -1,20 +1,39 @@
-<div class="container">
-  <button (click)="sumar(1)" *ngIf="!bonus">+1</button>
-  <button (click)="sumar(10)" *ngIf="bonus">+10</button>
-  <div>👍 {{contador}}</div>
+<div class="center">
+  <div class="center2">
+    <img [src]="picaFlorSrc" alt="picaFlor">
+
+  </div>
+  <form [formGroup]="miFormulario">
+    <input formControlName="nombre" placeholder="Nombre">
+    <input formControlName="email" placeholder="Email">
+    <button type="submit">Enviar</button>
+    <button type="button" (click)="resetFormulario()">Resetear</button>
+  </form>
+
+  <div class="container">
+    <button [disabled]="disableBtn" (click)="sumar(1)" *ngIf="!bonus">+1</button>
+    <button [disabled]="disableBtn" (click)="sumar(10)" *ngIf="bonus">+10</button>
+    <div [ngClass]="{
+      'warning': contador>75 && contador <=100,
+      'danger':contador>50 && contador <75,
+      'success':contador >=0  && contador<50
+    }">👍 {{contador}}</div>
+    <button type="button" (click)="resetCounter()">Reset</button> <!-- Botón de reinicio -->
+
+  </div>
+  <p>Puntuaciones más altas</p>
+  <table>
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Puntuación</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let jugador of tablaPuntuaciones">
+        <td>{{jugador.nombre}}</td>
+        <td>{{jugador.puntuacion}}</td>
+      </tr>
+    </tbody>
+  </table>
 </div>
-<p>Puntuaciones más altas</p>
-<table>
-  <thead>
-    <tr>
-      <th>Nombre</th>
-      <th>Puntuación</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let jugador of tablaPuntuaciones">
-      <td>{{jugador.nombre}}</td>
-      <td>{{jugador.puntuacion}}</td>
-    </tr>
-  </tbody>
-</table>
